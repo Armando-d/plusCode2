@@ -26,11 +26,11 @@ The precision of a plus code is indicated by the number of digits after the "+" 
 12 (4 digits after "+") -> area of 0.5 by 0.8 meters.
 }
 \examples{
+library(sf)
 point <- st_sfc(st_point(c(0, 0)))
 genPluscode(point,10)
 ###
 coordinates_df <- data.frame(lon = c(-6.56718, -6), lat = c(52.50145, 52))
 geom_df <- st_as_sf(coordinates_df, coords = c("lon", "lat"), crs = 4326)
 genPluscode(geom_df)
-genPluscode()
 }

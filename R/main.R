@@ -71,6 +71,7 @@ computeLatitudePrecision <- function(codeLength) {
 #' @param x A generic object.
 #' @return An object of class sfc_POINT.
 #' @examples
+#' library(sf)
 #' checkAndConvert(0)
 #' ###
 #' polygon <- st_sfc(st_polygon(list(cbind(c(0, 1, 1, 0, 0), c(0, 0, 1, 1, 0)))))
@@ -92,7 +93,7 @@ checkAndConvert <- function(x){
     x <- st_centroid(x)
   }
   if (is.na(st_crs(x))) {
-    x <- st_set_crs(point, 4326)
+    x <- st_set_crs(x, 4326)
   }
   if (st_crs(x)[1] != "EPSG:4326") {
     x <- st_transform(x, crs = 4326)
@@ -107,6 +108,7 @@ checkAndConvert <- function(x){
 #' @param codeLength A number.
 #' @return A character vector of length nrow(x).
 #' @examples
+#' library(sf)
 #' coordinates <- data.frame(lon = -6.56718, lat = 52.50145)
 #' geom_df <- st_as_sf(coordinates, coords = c("lon", "lat"), crs = 4326)
 #' dealWithDf(geom_df, 12)
@@ -135,13 +137,13 @@ dealWithDf <- function(x, codeLength){
 #' @param codeLength An optional number between 4 and 15 exluding 5, 7, 9; default is 10.
 #' @return Depending on input it returns a character or an object of class (sf, data.frame).
 #' @examples
+#' library(sf)
 #' point <- st_sfc(st_point(c(0, 0)))
 #' genPluscode(point,10)
 #' ###
 #' coordinates_df <- data.frame(lon = c(-6.56718, -6), lat = c(52.50145, 52))
 #' geom_df <- st_as_sf(coordinates_df, coords = c("lon", "lat"), crs = 4326)
 #' genPluscode(geom_df)
-#' genPluscode()
 #' @export
 genPluscode <- function(geom, codeLength = 10) {
 

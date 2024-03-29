@@ -19,6 +19,7 @@ Adapt the genPluscode function to a class object (sf, data.frame), it returns a 
 containing the pluscode of the coordinates in the records of the input data frame.
 }
 \examples{
+library(sf)
 coordinates <- data.frame(lon = -6.56718, lat = 52.50145)
 geom_df <- st_as_sf(coordinates, coords = c("lon", "lat"), crs = 4326)
 dealWithDf(geom_df, 12)

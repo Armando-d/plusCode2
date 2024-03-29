@@ -24,6 +24,7 @@ Checks on the input object and any conversions:
 - If the input object is of the sfc_POINT class, check that it has a reference system and that this is the WGS84 for the decimal coordinates; if it is not, it is set or converted.
 }
 \examples{
+library(sf)
 checkAndConvert(0)
 ###
 polygon <- st_sfc(st_polygon(list(cbind(c(0, 1, 1, 0, 0), c(0, 0, 1, 1, 0)))))

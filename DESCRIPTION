@@ -3,19 +3,14 @@ Type: Package
 Title: Coordinates to Plus Code conversion tool
 Version: 0.1.0
 Date: 29/03/2024
-Author: "Armando d'Aniello"
+Author: Armando d'Aniello
 Maintainer: "Armando d'Aniello" <armando.daniello@istat.it>
-Description: plusCode2 was created to generate the Plus Code of geometric objects or data frames that contain them. Giving the ability to specify the precision of the area. 
-    The main feature of the package comes from the open source code developed by Google present in the repository github.com/google/open-location-code/blob/main/java/src/main/java/com/google/openlocationcode/OpenLocationCode.java .
-    For details about Plus Code 
-    maps.google.com/pluscodes
-    github.com/google/open-location-code
-License: Apache License (>= 2)
+Description: plusCode2 was created to generate the Plus Code of geometric objects or data frames that contain them, giving the ability to specify the precision of the area. The main feature of the package comes from the open-source code developed by Google present in the repository github.com/google/open-location-code/blob/main/java/src/main/java/com/google/openlocationcode/OpenLocationCode.java. For details about Plus Code, visit maps.google.com/pluscodes or github.com/google/open-location-code.
+License: MIT + file LICENSE
 URL: https://github.com/Armando-d/plusCode2
 Encoding: UTF-8
 LazyData: true
-Depends: 
-    R (>= 4.3.2),
-    sf
+Depends: R (>= 4.3)
+Imports: sf
 RoxygenNote: 7.3.1
 Copyright: © 2014 Google Inc. All rights reserved.

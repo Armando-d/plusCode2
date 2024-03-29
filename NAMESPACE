@@ -1,1 +1,2 @@
 exportPattern("^[[:alpha:]]+")
+importFrom(sf, st_geometry_type, st_centroid, st_crs, st_set_crs, st_transform, st_coordinates)
